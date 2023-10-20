@@ -6,10 +6,10 @@ interface IInitialState {
   services: IService[];
 }
 
-const services = JSON.parse(getFromLocalStorage("cart")) as IService[];
+// const services = JSON.parse(getFromLocalStorage("cart")) as IService[];
 
 const initialState: IInitialState = {
-  services: services ? services : []
+  services:  []
 };
 
 const cartSlice = createSlice({
