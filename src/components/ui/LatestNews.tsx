@@ -1,3 +1,5 @@
+"use client"
+
 import { Avatar, Col, Flex, Row } from "antd";
 import Image from "next/image";
 import { CommentOutlined, CalendarOutlined } from "@ant-design/icons";
