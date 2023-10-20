@@ -11,14 +11,13 @@ const desc = ["terrible", "bad", "normal", "good", "wonderful"];
 
 const ReviewForm = ({serviceId}: {serviceId: string}) => {
   const [value, setValue] = useState<number>(3);
-  const user = getUserInfo()
+  const {userId} = getUserInfo() as any
 
   const [addReview] = useAddReviewMutation()
 
   const onSubmit = async (values: any) => {
     values["rating"] = value
-    //@ts-ignore
-    values["userId"] = user?.userId
+    values["userId"] = userId
     values["serviceId"] = serviceId
 
     try {

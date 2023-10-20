@@ -16,11 +16,13 @@ import { useState } from "react";
 import { useDebounced } from "@/redux/hooks";
 import {
   useBookingsQuery,
+  useCancelBookingMutation,
   useDeleteBookingMutation,
+  useMyBookingsQuery,
 } from "@/redux/api/bookingApi";
 import JRModal from "@/components/ui/JRModal";
 
-const ManageBookingPage = () => {
+const MYBookingsPage = () => {
   const query: Record<string, any> = {};
 
   const [page, setPage] = useState<number>(1);
@@ -42,16 +44,17 @@ const ManageBookingPage = () => {
     query["searchTerm"] = searchTerm;
   }
 
-  const [deleteBooking] = useDeleteBookingMutation();
-  const { data, isLoading } = useBookingsQuery({ ...query });
+  const [cancelBooking] = useCancelBookingMutation();
+  const { data, isLoading } = useMyBookingsQuery({ ...query });
   const bookings = data?.bookings;
   const meta = data?.meta;
 
   const deleteHandler = async (id: string) => {
     message.loading("Deleting...");
     try {
-      await deleteBooking(id);
-      message.success("Deleted Successfully!");
+      await cancelBooking(id);
+      message.success("Canceled Successfully!");
+      setOpen(false);
     } catch (error: any) {
       message.error(error.message);
     }
@@ -90,16 +93,6 @@ const ManageBookingPage = () => {
       render: (data: any) => {
         return (
           <>
-            <Link href={`/admin/manage_booking/details/${data.id}`}>
-              <Button onClick={() => console.log(data)} type="primary">
-                <EyeOutlined />
-              </Button>
-            </Link>
-            <Link href={`/admin/manage_booking/edit/${data.id}`}>
-              <Button style={{ margin: "0px 5px" }} type="primary">
-                <EditOutlined />
-              </Button>
-            </Link>
             <Button
               onClick={() => {
                 setOpen(true);
@@ -175,7 +168,7 @@ const ManageBookingPage = () => {
         showPagination={true}
       />
 
-<JRModal
+      <JRModal
         title="Remove Blog"
         isOpen={open}
         closeModal={() => setOpen(false)}
@@ -187,4 +180,4 @@ const ManageBookingPage = () => {
   );
 };
 
-export default ManageBookingPage;
+export default MYBookingsPage;

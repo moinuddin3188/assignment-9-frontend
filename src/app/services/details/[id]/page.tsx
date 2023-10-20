@@ -14,6 +14,7 @@ import { addToCart } from "@/redux/slices/cartSlice";
 import { isLoggedIn } from "@/services/auth.service";
 import { IReview, IService } from "@/types";
 import { Button, Col, Flex, Rate, Row } from "antd";
+import Link from "next/link";
 import React from "react";
 
 type IDProps = {
@@ -123,12 +124,14 @@ const DetailsPage = ({ params }: IDProps) => {
                 >
                   ADD TO CART
                 </Button>
-                <Button
-                  type="primary"
-                  style={{ backgroundColor: "#dd4026", borderRadius: "0" }}
-                >
-                  BOOK
-                </Button>
+                <Link href={`/booking?serviceId=${id}`}>
+                  <Button
+                    type="primary"
+                    style={{ backgroundColor: "#dd4026", borderRadius: "0" }}
+                  >
+                    BOOK
+                  </Button>
+                </Link>
               </Flex>
             )}
 
