@@ -12,7 +12,6 @@ import { Badge, Button, Input, Select, message } from "antd";
 import Link from "next/link";
 import dayjs from "dayjs";
 import JRTable from "@/components/ui/JRTable";
-// import { useAdminsQuery, useDeleteAdminMutation } from "@/redux/api/adminApi";
 import { useState } from "react";
 import { useDebounced } from "@/redux/hooks";
 import { useBlogsQuery, useDeleteBlogMutation } from "@/redux/api/blogApi";

@@ -8,10 +8,6 @@ import FormTextArea from "@/components/form/FormTextArea";
 import ActionBar from "@/components/ui/ActionBar";
 import JRBreadcrumb from "@/components/ui/JRBreadcrumb";
 import { employeeStatusOptions, genderOptions } from "@/constants/global";
-// import {
-//   useSingleDepartmentQuery,
-//   useUpdateDepartmentMutation,
-// } from "@/redux/api/departmentApi";
 import { Button, Col, Row, message } from "antd";
 
 type IDProps = {

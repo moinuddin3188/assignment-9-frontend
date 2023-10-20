@@ -2,20 +2,13 @@
 
 import Form from "@/components/form/Form";
 import FormInput from "@/components/form/FormInput";
-import FormSelectField from "@/components/form/FormSelectField";
-import FormTextArea from "@/components/form/FormTextArea";
 import ActionBar from "@/components/ui/ActionBar";
 import JRBreadcrumb from "@/components/ui/JRBreadcrumb";
-import { genderOptions } from "@/constants/global";
 import {
   useCategoryQuery,
   useUpdateCategoryMutation,
 } from "@/redux/api/categoryApi";
 import { useUpdateUserMutation, useUserQuery } from "@/redux/api/userApi";
-// import {
-//   useSingleDepartmentQuery,
-//   useUpdateDepartmentMutation,
-// } from "@/redux/api/departmentApi";
 import { Button, Col, Row, message } from "antd";
 
 type IDProps = {

@@ -10,10 +10,6 @@ import ActionBar from "@/components/ui/ActionBar";
 import JRBreadcrumb from "@/components/ui/JRBreadcrumb";
 import { blogStatusOptions, genderOptions } from "@/constants/global";
 import { useBlogQuery, useUpdateBlogMutation } from "@/redux/api/blogApi";
-// import {
-//   useSingleDepartmentQuery,
-//   useUpdateDepartmentMutation,
-// } from "@/redux/api/departmentApi";
 import { Button, Col, Row, message } from "antd";
 import dayjs from "dayjs";
 

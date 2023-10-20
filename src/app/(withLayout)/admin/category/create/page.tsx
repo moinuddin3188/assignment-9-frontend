@@ -2,16 +2,9 @@
 
 import Form from "@/components/form/Form";
 import FormInput from "@/components/form/FormInput";
-import FormSelectField from "@/components/form/FormSelectField";
-import FormTextArea from "@/components/form/FormTextArea";
 import JRBreadcrumb from "@/components/ui/JRBreadcrumb";
-import UploadImage from "@/components/ui/UploadImage";
-import { genderOptions } from "@/constants/global";
-import { getCloudinaryUrl, getPresetKey } from "@/helpers/config/envConfig";
-import { useAddAdminMutation } from "@/redux/api/adminApi";
 import { useAddCategoryMutation } from "@/redux/api/categoryApi";
 import { Button, Col, Row, message } from "antd";
-import axios from "axios";
 import React, { useState } from "react";
 
 const CreateCategoryPage = () => {

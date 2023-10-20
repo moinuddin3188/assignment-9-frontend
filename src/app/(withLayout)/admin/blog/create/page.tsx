@@ -13,10 +13,6 @@ import {
 } from "@/constants/global";
 import { getCloudinaryUrl, getPresetKey } from "@/helpers/config/envConfig";
 import { useAddBlogMutation } from "@/redux/api/blogApi";
-// import { useAddAdminWithFormDataMutation } from "@/redux/api/adminApi";
-// import { useDepartmentsQuery } from "@/redux/api/departmentApi";
-// import { adminSchema } from "@/schemas/admin";
-// import { yupResolver } from "@hookform/resolvers/yup";
 import { Button, Col, Row, message } from "antd";
 import axios from "axios";
 import dayjs, { Dayjs } from "dayjs";

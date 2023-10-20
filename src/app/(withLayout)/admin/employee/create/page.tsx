@@ -11,10 +11,6 @@ import {
   employeeStatusOptions,
   genderOptions,
 } from "@/constants/global";
-// import { useAddAdminWithFormDataMutation } from "@/redux/api/adminApi";
-// import { useDepartmentsQuery } from "@/redux/api/departmentApi";
-// import { adminSchema } from "@/schemas/admin";
-// import { yupResolver } from "@hookform/resolvers/yup";
 import { Button, Col, Row, message } from "antd";
 import React from "react";
 
