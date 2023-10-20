@@ -8,7 +8,6 @@ import {
   EyeOutlined,
   ReloadOutlined,
 } from "@ant-design/icons";
-import { IDepartment } from "@/types";
 import { Button, Input, message } from "antd";
 import Link from "next/link";
 import dayjs from "dayjs";
@@ -69,13 +68,6 @@ const ManageEmployeePage = () => {
     {
       title: "Email",
       dataIndex: "email",
-    },
-    {
-      title: "Department",
-      dataIndex: "managementDepartment",
-      render: function (data: IDepartment) {
-        return <>{data?.title}</>;
-      },
     },
     {
       title: "Designation",
