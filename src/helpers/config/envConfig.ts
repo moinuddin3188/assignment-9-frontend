@@ -3,7 +3,6 @@ export const getBaseUrl = (): string => {
 };
 
 export const getCloudinaryUrl = (): string => {
-
   return (
     process.env.CLOUDINARY_API_URL ||
     "https://api.cloudinary.com/v1_1/dezrk5czt/image/upload"
