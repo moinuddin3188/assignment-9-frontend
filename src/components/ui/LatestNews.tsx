@@ -100,7 +100,9 @@ const LatestNews = () => {
       </Row>
 
       <Flex justify="center" style={{ marginTop: "50px" }}>
+        <Link href="/blogs">
         <JRButton title="BLOGS" color="black" />
+        </Link>
       </Flex>
     </section>
   );
